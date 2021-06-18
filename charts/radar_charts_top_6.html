@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Competitive Assessment by Category</title>
+  <!--    Load the AJAX API-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script type="text/javascript">
+
+    google.charts.load('49', {'packages': ['vegachart']}).then(loadChartData);
+    // google.charts.load('current', {'packages':['corechart']}).then(loadChartData);
+
+    const url = 'https://docs.google.com/spreadsheets/d/1WTryprRV73dmi54-cuivD1nIOq2dxw-rLQ-V_tMwDc4/';
+    const sheet = 'Top6RadarChartData';
+    const headers = '1';
+
+    function loadChartData() {
+      let queryString = encodeURIComponent('SELECT A, B, C, D, E, F, G');
+      let query = new google.visualization.Query(url+
+              'gviz/tq?sheet='+sheet+
+              '&headers='+headers+
+              '&tq='+queryString
+      );
+      query.send(handleQueryResponse);
+    }
+
+    function handleQueryResponse(response) {
+      // console.log(response);
+      let chartsDataTable = response.getDataTable();
+      // console.log(chartsDataTable);
+      // let chartDataArray = chartsDataTable['fg'];
+      // console.log(chartDataArray);
+      loadCharts(chartsDataTable);
+    }
+
+    function loadCharts(chartsData) {
+      // console.log(chartsData);
+      var categories = chartsData['If'];
+      // console.log(categories);
+      var dataArray = chartsData['fg'];
+      console.log(dataArray);
+      for(var i=0; i<dataArray.length; i++) {
+        var title = dataArray[i]['c'][0]['v'];
+        console.log(title);
+        var data = [];
+        for(var j=1; j<categories.length; j++) {
+          data[j-1] =
+                  [categories[j]['label'], dataArray[i]['c'][j]['v']/5, title];
+        }
+        console.log(data);
+        addChart(title, data, "#B82E2E");
+      }
+    }
+
+    function addChart(title, data, color) {
+      // console.log(data);
+      const dataTable = new google.visualization.DataTable();
+      dataTable.addColumn({type: 'string', 'id': 'key'});
+      dataTable.addColumn({type: 'number', 'id': 'value'});
+      dataTable.addColumn({type: 'string', 'id': 'category'});
+      dataTable.addRows(data);
+      const options = {
+        'vega': {
+          "$schema": "https://vega.github.io/schema/vega/v5.json",
+          "width": 300,
+          "height": 300,
+          "autosize": "none",
+          "title": {
+            "text": title,
+            "anchor": "middle",
+            "fontSize": 14,
+            "dy": -8,
+            "dx": {"signal": "-width/4"},
+            "subtitle": "Aggregate scores for " +title
+          },
+          "signals": [
+            {"name": "radius", "update": "90"}
+          ],
+          "data": [
+            {
+              "name": "table",
+              "source": "datatable",
+            },
+            {
+              "name": "keys",
+              "source": "table",
+              "transform": [
+                {
+                  "type": "aggregate",
+                  "groupby": ["key"]
+                }
+              ]
+            }
+          ],
+          "scales": [
+            {
+              "name": "angular",
+              "type": "point",
+              "range": {"signal": "[-PI, PI]"},
+              "padding": 0.5,
+              "domain": {"data": "table", "field": "key"}
+            },
+            {
+              "name": "radial",
+              "type": "linear",
+              "range": {"signal": "[0, radius]"},
+              "zero": true,
+              "nice": false,
+              "domain": [0,1.0],
+            }
+          ],
+          "encode": {
+            "enter": {
+              "x": {"signal": "width/2"},
+              "y": {"signal": "height/2 + 20"}
+            }
+          },
+          "marks": [
+            {
+              "type": "group",
+              "name": "categories",
+              "zindex": 1,
+              "from": {
+                "facet": {"data": "table", "name": "facet", "groupby": ["category"]}
+              },
+              "marks": [
+                {
+                  "type": "line",
+                  "name": "category-line",
+                  "from": {"data": "facet"},
+                  "encode": {
+                    "enter": {
+                      "interpolate": {"value": "linear-closed"},
+                      "x": {"signal": "scale('radial', datum.value) * cos(scale('angular', datum.key))"},
+                      "y": {"signal": "scale('radial', datum.value) * sin(scale('angular', datum.key))"},
+                      "stroke": {"value": color},
+                      "strokeWidth": {"value": 1.5},
+                      "fill": {"value": color},
+                      "fillOpacity": {"value": 0.1}
+                    }
+                  }
+                },
+                {
+                  "type": "text",
+                  "name": "value-text",
+                  "from": {"data": "category-line"},
+                  "encode": {
+                    "enter": {
+                      "x": {"signal": "datum.x + 14 * cos(scale('angular', datum.datum.key))"},
+                      "y": {"signal": "datum.y + 14 * sin(scale('angular', datum.datum.key))"},
+                      "text": {"signal": "format(datum.datum.value,'.1%')"},
+                      "opacity": {"signal": "datum.datum.value > 0.01 ? 1 : 0"},
+                      "align": {"value": "center"},
+                      "baseline": {"value": "middle"},
+                      "fontWeight": {"value": "bold"},
+                      "fill": {"value": color},
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "rule",
+              "name": "radial-grid",
+              "from": {"data": "keys"},
+              "zindex": 0,
+              "encode": {
+                "enter": {
+                  "x": {"value": 0},
+                  "y": {"value": 0},
+                  "x2": {"signal": "radius * cos(scale('angular', datum.key))"},
+                  "y2": {"signal": "radius * sin(scale('angular', datum.key))"},
+                  "stroke": {"value": "lightgray"},
+                  "strokeWidth": {"value": 1}
+                }
+              }
+            },
+            {
+              "type": "text",
+              "name": "key-label",
+              "from": {"data": "keys"},
+              "zindex": 1,
+              "encode": {
+                "enter": {
+                  "x": {"signal": "(radius + 11) * cos(scale('angular', datum.key))"},
+                  "y": [
+                    {
+                      "test": "sin(scale('angular', datum.key)) > 0",
+                      "signal": "5 + (radius + 11) * sin(scale('angular', datum.key))"
+                    },
+                    {
+                      "test": "sin(scale('angular', datum.key)) < 0",
+                      "signal": "-5 + (radius + 11) * sin(scale('angular', datum.key))"
+                    },
+                    {
+                      "signal": "(radius + 11) * sin(scale('angular', datum.key))"
+                    }
+                  ],
+                  "text": {"field": "key"},
+                  "align":
+                          {
+                            "value": "center"
+                          },
+                  "baseline": [
+                    {
+                      "test": "scale('angular', datum.key) > 0", "value": "top"
+                    },
+                    {
+                      "test": "scale('angular', datum.key) == 0", "value": "middle"
+                    },
+                    {
+                      "value": "bottom"
+                    }
+                  ],
+                  "fill": {"value": "black"},
+                  "fontSize": {"value": 12}
+                }
+              }
+            },
+            {
+              "type": "line",
+              "name": "twenty-line",
+              "from": {"data": "keys"},
+              "encode": {
+                "enter": {
+                  "interpolate": {"value": "linear-closed"},
+                  "x": {"signal": "0.2 * radius * cos(scale('angular', datum.key))"},
+                  "y": {"signal": "0.2 * radius * sin(scale('angular', datum.key))"},
+                  "stroke": {"value": "lightgray"},
+                  "strokeWidth": {"value": 1}
+                }
+              }
+            },
+            {
+              "type": "line",
+              "name": "fourty-line",
+              "from": {"data": "keys"},
+              "encode": {
+                "enter": {
+                  "interpolate": {"value": "linear-closed"},
+                  "x": {"signal": "0.4 * radius * cos(scale('angular', datum.key))"},
+                  "y": {"signal": "0.4 * radius * sin(scale('angular', datum.key))"},
+                  "stroke": {"value": "lightgray"},
+                  "strokeWidth": {"value": 1}
+                }
+              }
+            },
+            {
+              "type": "line",
+              "name": "sixty-line",
+              "from": {"data": "keys"},
+              "encode": {
+                "enter": {
+                  "interpolate": {"value": "linear-closed"},
+                  "x": {"signal": "0.6 * radius * cos(scale('angular', datum.key))"},
+                  "y": {"signal": "0.6 * radius * sin(scale('angular', datum.key))"},
+                  "stroke": {"value": "lightgray"},
+                  "strokeWidth": {"value": 1}
+                }
+              }
+            },
+            {
+              "type": "line",
+              "name": "eighty-line",
+              "from": {"data": "keys"},
+              "encode": {
+                "enter": {
+                  "interpolate": {"value": "linear-closed"},
+                  "x": {"signal": "0.8 * radius * cos(scale('angular', datum.key))"},
+                  "y": {"signal": "0.8 * radius * sin(scale('angular', datum.key))"},
+                  "stroke": {"value": "lightgray"},
+                  "strokeWidth": {"value": 1}
+                }
+              }
+            },
+            {
+              "type": "line",
+              "name": "outer-line",
+              "from": {"data": "radial-grid"},
+              "encode": {
+                "enter": {
+                  "interpolate": {"value": "linear-closed"},
+                  "x": {"field": "x2"},
+                  "y": {"field": "y2"},
+                  "stroke": {"value": "lightgray"},
+                  "strokeWidth": {"value": 1}
+                }
+              }
+            }
+          ]
+        }
+      };
+      const elem = document.createElement("div");
+      elem.setAttribute("class", "col-md-5ths col-xs-6");
+      const box = document.createElement("div");
+      box.setAttribute("class", "benefit-box");
+      const chart = new google.visualization.VegaChart(box);
+      chart.draw(dataTable, options);
+      elem.appendChild(box);
+      document.getElementById("chart-div").appendChild(elem);
+    }
+  </script>
+</head>
+<body>
+<h1>Overall Assessment of Relevant Companies</h1>
+<div class="row justify-content-center" id="chart-div">
+</div>
+</body>
+</html>

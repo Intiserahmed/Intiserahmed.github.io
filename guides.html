@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Tech Blog</title>
+  <meta name="description"
+        content="@platform Developer Community Blogs">
+
+  <!-- Bootstrap core CSS -->
+  <link href="UpdatedLandingPage/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="UpdatedLandingPage/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="UpdatedLandingPage/vendor/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="https://use.typekit.net/fch8oap.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="stylesheets/new-age.css" rel="stylesheet">
+
+  <!-- Custom styles for carousel -->
+  <link href="stylesheets/carousel.css" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+  <!-- Tab Icon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/@logo.jpg" />
+
+  <!-- Matomo -->
+  <script type="text/javascript">
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  _paq.push(['requireCookieConsent']);
+  (function() {
+    var u="https://atsign.matomo.cloud/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '2']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/atsign.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+  <!-- End Matomo Code -->
+
+  <script type="text/javascript">
+    $(window).on('load',function(){
+        $('#permission').modal('show');
+    });
+</script>
+
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top p-0" id="mainNav">
+
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="index.html"><img
+            src="assets/img/@dev.png"
+            alt="The @ Company" id="logo" class="top-logo"></a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars ml-1"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="gettingstarted.html">Get Started</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="docs.html">Docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="samples.html">Sample Apps</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="guides.html">Tech Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link js-scroll-trigger" href="community.html">Community</a>
+          <div class="dropdown-content">
+            <a href="advisors.html">Our Advisors</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link js-scroll-trigger" href="devprogram.html">@dev program</a>
+          <div class="dropdown-content">
+            <a href="commissions.html">Commissions</a>
+            <a href="certification.html">Certification</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div style="text-align: end;padding-right: 3%;">
+    <a href="https://twitter.com/atsigncompany"><img src="assets/img/twitter.png" alt="The @ Company Twitter" id="Twitterlogo" width="20px" style="padding:2px;"></a>
+    <a href="https://github.com/atsign-foundation"><img src="assets/img/Github.png" alt="The @ Company Github" id="GHlogo" width="22px" style="padding:2px;"></a>
+    <a href="https://blog.atsign.dev"><img src="assets/img/hashnode-icon-black.png" alt="The @ Company Hashnode" id="HNlogo" width="22px"style="padding:1px;"></a>
+    <a href="https://atsigncompany.medium.com/"><img src="assets/img/medium.png" alt="The @ Company Medium" id="Mediumlogo" width="35px"></a>
+    <a href="https://www.youtube.com/channel/UCzjSJbPmIEDXFbHb2RIj9Gg"><img src="assets/img/YT Icon.png" alt="The @ Company YouTube" id="YTlogo" width="27px"></a>
+  </div>
+</nav>
+
+<header class="masthead">
+  <div class="col-lg-12 p-0 my-auto">
+    <div class="header-content mx-auto">
+      <div class="container">
+        <div id="MastheadContent">
+            <h3><span style="color: #ff6600;">@</span>platform blogs from the Flutter community</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<div class="orange-bar">
+</div>
+<div  >
+  <div class="container"   >
+
+    <div style="text-align: center;"><h3>Check out our <span style="color: #ff6600;">@</span>dev blogs on <a href="https://atsigncompany.medium.com/" target="_blank">
+      <img src="assets/img/Medium-Logo-Black-RGB@1x.png" alt="medium" style="width:15%;;vertical-align: middle;"></a> & <a href="https://blog.atsign.dev" target="_blank">
+        <img src="assets/img/Hashnode.png" alt="Hashnode" style="width:15%;height:10% ;;vertical-align: top;">
+        </a>
+        <br><br></h3></div>
+
+        <div style="text-align: center;"><p><a><h2>Featured Articles</h2></a></p></div>
+    <!--  CAROUSEL CODE
+  <div style="text-align: center;">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
+      <div class="carousel-inner" >
+        <div class="carousel-item active" >
+          <a href="https://medium.com/flutter-community/authentication-in-flutter-apps-using-the-protocol-3ae03755540f"><img class="d-block w-100" src="https://miro.medium.com/max/639/0*Sp4LW8w2irIasJTP.png" alt="First slide"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://medium.com/flutter-community/my-experience-building-a-flutter-app-using-protocol-7a77314be2f8"><img class="d-block w-100" src="https://miro.medium.com/max/700/1*Dz90SGlxp1I45IYpWn8Ekw.png" alt="First slide"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://atsigncompany.medium.com/the-hidden-beauty-of-protocol-namespaces-6f5fab7f7a09"><img class="d-block w-100" src="https://miro.medium.com/max/1000/1*lzPxTnQfmModYxE9iO4euA.jpeg" alt="Second slide"></a>
+        </div>
+        <div class="carousel-item">  
+          <a href="https://atsigncompany.medium.com/why-is-the-protocol-a-game-changer-for-flutter-developers-5253be031743"><img class="d-block w-100" src="https://miro.medium.com/max/700/1*Xfjux0YAUO2wDr0ezfozEA.jpeg" alt="Third slide"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://atsigncompany.medium.com/data-encryption-caching-with-the-protocol-debe9efc0f49"><img class="d-block w-100" src="https://miro.medium.com/max/1000/1*kvfQj9iVQbYCNZMdyGmA7w.jpeg" alt="Fourth slide"></a>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  -->
+    <DIV >
+      
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Mar 27,2021</strong>
+              <h4 class="mb-0">The @platform:A Firebase alternative</h4>
+              <div class="mb-1 text-muted"><br>By Joe Muller</div>
+              <a href="https://mullr.dev/2021/03/27/the-platform-a-firebase-alternative/" class="stretched-link">Read article</a>
+            </div>
+            <div class="benefit-box">
+              <img class="card-img-top" src="https://i2.wp.com/mullr.dev/wp-content/uploads/2021/03/Blue-and-White-Abstract-Technology-Blog-Banner-1.png" alt="Article 1">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Mar 27,2021</strong>
+              <h4 class="mb-0">Sharing images on the @platform with Flutter</h4>
+              <div class="mb-1 text-muted"><br> By Joe Muller</div>
+              <a href="https://mullr.dev/2021/03/27/sharing-images-on-the-platform/" class="stretched-link">Read article</a>
+            </div>
+            <div class="benefit-box">
+              <img class="card-img-top" src="https://i2.wp.com/mullr.dev/wp-content/uploads/2021/03/Blue-and-White-Abstract-Technology-Blog-Banner-2.png" alt="Article 2">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Mar 11,2021</strong>
+              <h4 class="mb-0">Why is the @platform a game-changer for Flutter developers?</h4>
+              <div class="mb-1 text-muted"><br>By Anthony Prakash</div>
+              <a href="https://atsigncompany.medium.com/why-is-the-protocol-a-game-changer-for-flutter-developers-5253be031743" class="stretched-link">Read article</a>
+            </div>
+            <div class="benefit-box">
+              <img class="card-img-top" src="https://miro.medium.com/max/700/1*Xfjux0YAUO2wDr0ezfozEA.jpeg" alt="Article 1">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Mar 1,2021</strong>
+              <h4 class="mb-0">These 48-hr apps on the @platform can make the world a better place</h4>
+              <div class="mb-1 text-muted"><br>By Esther Kao</div>
+              <a href="https://atsigncompany.medium.com/these-48-hour-flutter-app-prototypes-built-on-the-protocol-could-make-the-world-a-better-place-a462a5651b19" class="stretched-link">Read article</a>
+            </div>
+            <div class="benefit-box">
+              <img class="card-img-top" src="https://miro.medium.com/max/1000/1*q_9ZT5qjGE8FKC83ixCyeA.png" alt="Article 2">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Feb 12,2021</strong>
+              <h4 class="mb-0">The hidden beauty of @protocol namespaces</h4>
+              <div class="mb-1 text-muted"><br><br>by <a href="https://atsign.directory/@finewisteria">Tyler McNierney</a></div>
+              <a href="https://atsigncompany.medium.com/the-hidden-beauty-of-protocol-namespaces-6f5fab7f7a09" class="stretched-link">Read article</a>
+            </div>
+            <div class="benefit-box">
+              <img class="card-img-top" src="https://miro.medium.com/max/700/1*ox4I4k8x3lZY2FkPlBXPlw.jpeg" alt="Article 3">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Feb 4,2021</strong>
+              <h4 class="mb-0">The @protocol synchronization</h4>
+              <div class="mb-1 text-muted"><br>by Murali Padmanaban, Naresh Gurijala and Intiser Ahmed</div>
+              <a href="https://atsigncompany.medium.com/the-protocol-synchronization-77b00ca5341b" class="stretched-link">Read article</a>
+            </div>
+            <div class="benefit-box">
+              <img class="card-img-top" src="https://miro.medium.com/max/700/1*4IZR39DaMKEKK2Z5FJLa3A.jpeg" alt="Article 1">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Jan 24,2021</strong>
+              <h4 class="mb-0">Authentication in Flutter Apps using the @protocol</h4>
+              <div class="mb-1 text-muted"><br> by <a href="https://jtmuller5-98869.medium.com/">Joseph Muller</a></div>
+              <a href="https://medium.com/flutter-community/authentication-in-flutter-apps-using-the-protocol-3ae03755540f" class="stretched-link"><br>Read article</a>
+            </div>
+            <div class="benefit-box">
+              <img class="card-img-top" src="https://miro.medium.com/max/639/0*Sp4LW8w2irIasJTP.png" alt="Article 6">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Jan 19,2021</strong>
+              <h4 class="mb-0">Data encryption & caching with the @protocol</h4>
+              <div class="mb-1 text-muted">by Tyler Trott, Murali Padmanaban, Sitaram Kalluri</div>
+              <a href="https://atsigncompany.medium.com/data-encryption-caching-with-the-protocol-debe9efc0f49" class="stretched-link">Read article</a>
+            </div>
+            <div class="benefit-box">
+              <img class="card-img-top" src="https://miro.medium.com/max/700/1*UfySZz8xjZpzP3aEbH1Ksg.jpeg" alt="Article 6">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Jan 15,2021</strong>
+              <h4 class="mb-0">My experience building a Flutter app using @protocol</h4>
+              <div class="mb-1 text-muted"><br>by<a href="https://atsign.directory/@bisondostistale"> Souvik Biswas</a></div>
+              <a href="https://medium.com/flutter-community/my-experience-building-a-flutter-app-using-protocol-7a77314be2f8" class="stretched-link">Read article</a>
+            </div>
+            <div class="benefit-box">
+              <img class="card-img-top" src="https://miro.medium.com/max/700/1*Dz90SGlxp1I45IYpWn8Ekw.png" alt="Article 6">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--
+      <div  >
+        <img class="card-img-top" src="https://miro.medium.com/max/1000/1*lzPxTnQfmModYxE9iO4euA.jpeg" alt="Article 1">
+        <div class="card-body">
+          <h5 >The hidden beauty of @protocol namespaces</h5>
+          <p >by <a href="https://atsign.directory/@finewisteria">Tyler McNierney</a></p>
+          <!--<a href="#" class="bt">Read Article</a>-
+        </div>
+      </div>
+      <div class="benefit-box"  >
+        <img class="card-img-top" src="https://miro.medium.com/max/700/1*Xfjux0YAUO2wDr0ezfozEA.jpeg" alt="Article 2">
+        <div class="card-body">
+          <h5 class="card-title">Why is the @protocol a game-changer for Flutter developers?</h5>
+          <p class="card-text">by <a href="https://atsign.directory/@anthony">@anthony</a></p>
+          <a href="https://atsigncompany.medium.com/why-is-the-protocol-a-game-changer-for-flutter-developers-5253be031743" class="btn btn-primary">Read Article</a>
+        </div>
+      </div>
+      <div class="benefit-box" >
+        <img class="card-img-top" src="https://miro.medium.com/max/700/1*Dz90SGlxp1I45IYpWn8Ekw.png" alt="Article 3">
+        <div class="card-body">
+          <h5 class="card-title">My experience building a Flutter app using @protocol</h5>
+          <p class="card-text">by<a href="https://atsign.directory/@bisondostistale"> Souvik Biswas</a></p>
+          <a href="https://medium.com/flutter-community/my-experience-building-a-flutter-app-using-protocol-7a77314be2f8" class="btn btn-primary">Read Article</a>
+        </div>
+      </div>
+      <div class="benefit-box" >
+        <img class="card-img-top" src="https://miro.medium.com/max/639/0*Sp4LW8w2irIasJTP.png" alt="Article 4">
+        <div class="card-body">
+          <h5 class="card-title">Authentication in Flutter using the @protocol </h5>
+          <p class="card-text">By Joe Muller</p>
+          <a href="https://medium.com/flutter-community/authentication-in-flutter-apps-using-the-protocol-3ae03755540f" class="btn btn-primary">Read Article</a>
+        </div>
+      </div>
+    -->
+    </DIV>
+
+    
+
+
+  
+  <!--
+  <table class="table" align="center">
+  <thead>
+    <tr>
+      
+   
+      <th scope="col">Developer 💙 </th>
+      <th scope="col">Date Published</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     
+      <td><a href="https://atsigncompany.medium.com/the-hidden-beauty-of-protocol-namespaces-6f5fab7f7a09">The hidden beauty of @protocol namespaces</a></td>
+ 
+      <td><a href="https://github.com/tkmcnierney">Tyler McNierney</a></td>
+      <td>Feb-12-2021</td>
+    </tr>
+    <tr>
+   
+      <td><a href="https://atsigncompany.medium.com/the-protocol-synchronization-77b00ca5341b">The @protocol synchronization</a></td>
+     
+      <td><a href="https://github.com/Intiserahmed">Intiser Ahmed</a>,<a href="https://github.com/murali-shris">Muralidharan Padmanabhan</a> & <a href="https://github.com/kalluriramkumar">Sita Ram</a></td>
+      <td>Feb-04-2021</td>
+    </tr>
+    <tr>
+      
+      <td><a href="https://medium.com/flutter-community/authentication-in-flutter-apps-using-the-protocol-3ae03755540f">Authentication in Flutter Apps using the @Protocol</a></td>
+     
+      <td><a href="https://jtmuller5-98869.medium.com/">Joseph Muller</a></td>
+      <td>Jan-24-2021</td>
+    </tr>
+    <tr>
+  
+      <td><a href="https://atsigncompany.medium.com/data-encryption-caching-with-the-protocol-debe9efc0f49">Data encryption & caching with the @protocol</a></td>
+      
+      <td><a href="https://github.com/TylerTrott">Tyler Trott</a>,<a href="https://github.com/murali-shris">Muralidharan Padmanabhan</a> & <a href="https://github.com/kalluriramkumar">Sita Ram</a></td>
+      <td>Jan-19-2021</td>
+    </tr>
+    <tr>
+     
+      <td><a href="https://atsigncompany.medium.com/the-protocol-fundamentals-7629b232adcf">The @protocol fundamentals</a></td>
+  
+      <td><a href="https://github.com/murali-shris">Muralidharan Padmanabhan</a> & <a href="https://www.linkedin.com/in/anthony-prakash/">Anthony Prakash</a></td>
+      <td>Jan-19-2021</td>
+    </tr>
+    <tr>
+    
+      <td><a href="https://medium.com/flutter-community/my-experience-building-a-flutter-app-using-protocol-7a77314be2f8">My experience building a Flutter app using @protocol</a></td>
+      
+      <td><a href="https://medium.com/@sbis1999">Souvik Biswas</a></td>
+      <td>Jan-15-2021</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>What is TTL and how to create keys with TTL</td>
+      
+      <td>Sita - LinkedIn or Twitter</td>
+      <td>Coming Soon!</td>
+    </tr>
+  </tbody>
+</table>-->
+<!--  <div class="col">
+    <div class="card shadow-sm">
+      <svg class="bd-placeholder-img card-img-top" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title> </title><rect width="100%" height="100%" fill="#F05E3E"/><text x="10%" y="50%" fill="#eceeef" dy=".3em" style="font-size: x-large;" >@protocol fundamentals </text></svg>
+
+      <div class="card-body">
+        <p class="card-text">Whether you’re a developer looking to get started on the @protocol, an enterprise technologist trying to get a deeper understanding, or a casual Internet reader who randomly stumbled upon us, you’ve come to the right place. This article will give you a basic understanding of how our technology works.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='https://atsigncompany.medium.com/the-protocol-fundamentals-7629b232adcf';">Read Article</button>
+          </div>
+          <small class="text-muted">6 mins</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col">
+    <div class="card shadow-sm">
+      <svg class="bd-placeholder-img card-img-top" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title> </title><rect width="100%" height="100%" fill="#F05E3E"/><text x="10%" y="50%" fill="#eceeef" dy=".3em" style="font-size: x-large;" >@protocol namespaces </text></svg>
+
+      <div class="card-body">
+        <p class="card-text">At the surface level, the @protocol appears to be a simple, robust software development infrastructure that magically provides a backend service for apps that are built on top of it.We will introduce a critical piece of the @protocol puzzle — application namespaces — through an interview with co-founders Colin & Kevin.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='https://atsigncompany.medium.com/the-hidden-beauty-of-protocol-namespaces-6f5fab7f7a09';">Read Article</button>
+          </div>
+          <small class="text-muted">5 mins</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card shadow-sm">
+      <svg class="bd-placeholder-img card-img-top" width="100%" height="150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title> </title><rect width="100%" height="100%" fill="#F05E3E"/><text x="0%" y="50%" fill="#eceeef" dy=".3em" style="font-size: x-large;">The @protocol synchronization
+      </text></svg>
+
+      <div class="card-body">
+        <p class="card-text">In the @protocol world, your personal data is encrypted with your own private key and stored on your mobile device. Periodically, this data is copied securely over to a dedicated cloud server which only you can decrypt and read since you have sole access to your private key. Nobody else, including The @ Company can read your data.</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href='https://atsigncompany.medium.com/the-protocol-synchronization-77b00ca5341b';">Read Article</button>
+          </div>
+          <small class="text-muted">5 mins</small>
+        </div>
+      </div>
+    </div>
+  </div>  -->
+<!--
+<div>
+  <div><p><a><h1>Coding Insights from our Developer Commmunity</h1></a></p></div>
+  <div></div>
+  <table class="table" align="center">
+  <thead>
+    <tr>
+    
+      <th scope="col">Topic</th>
+      
+      <th scope="col">Developer 💙</th>
+      <th scope="col">Date Published</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     
+      <td><a href="https://www.reddit.com/r/EctoGammat/comments/lhrvnd/the_autonotify_configuration_variable/">How Autonotify works?</a></td>
+      
+      <td><a href="https://github.com/kalluriramkumar">Sita Ram</a></td>
+      <td>Feb-11-2021</td>
+    </tr>
+    <tr>
+      
+      <td><a href="https://www.reddit.com/r/EctoGammat/comments/lnp1fm/the_timetolive_ttl_attribute/">The TimeToLive (TTL) attribute</a></td>
+     
+      <td><a href="https://github.com/kalluriramkumar">Sita Ram</a></td>
+      <td>Feb-19-2021</td>
+    </tr>
+   <tr>
+   
+      <td><a href="https://www.reddit.com/r/EctoGammat/comments/lqrud9/how_to_know_the_status_of_a_notification">How to know the status of a notification?</a></td>
+      <td><a href="https://github.com/naresh0689">Naresh Gurijala</a></td>
+      <td>Feb-24-2021</td>
+    </tr>
+    <tr>
+     
+      <td>Config Verb</td>
+      <td><a href="https://github.com/Sameeraja-Bharathula">Sameeraja</a></td>
+      <td>Coming Soon!</td>
+    </tr>
+    <tr>
+     
+      <td>Batch Commands in the @protocol</td>
+      <td><a href="https://github.com/murali-shris">Muralidharan Padmanabhan</a></td>
+      <td>Coming Soon!</td>
+    </tr>
+  </tbody>
+</table>
+  
+</div>
+-->
+  </div>
+
+<div id="page-main">
+  <!-- HERO -->
+  <div class="hero">
+    <!-- DIV: UNLABELED TUPPERWARE -->
+    <div class="hero-content">
+      <!-- H1 FOR TITLE -->
+
+    </div>
+  </div>
+</div>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <ul class="list-inline list-social">
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="gettingstarted.html">Get Started</a>
+      </li>
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="docs.html">Docs</a>
+      </li>
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="guides.html">Tech Blog</a>
+      </li>
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="samples.html">Sample Apps</a>
+      </li>
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="community.html">Community</a>
+      </li>
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="devprogram.html">@dev program</a>
+      </li>
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="http://atsign.com">The @ Company</a>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-outline" data-toggle="modal" data-target="#permission">
+    We do not use tracking cookies
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="permission" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sorry, no cookies for you</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="text-align:left;">
+          <div id="optout-form" class="api-docs">
+            <p>Just a heads up! We do not use any cookies to track or sell any of your personally
+              identifying information on our site. We do use Matomo to analyze how people are using
+              our site. Understanding what people love and hate about our site helps us build a
+              better website.</p>
+            <p>Does this sound okay? If not, just click below to opt out of any tracking.</p>
+
+            <p>
+              <input type="checkbox" id="optout" />
+              <label for="optout"><strong></strong></label>
+            </p>
+          </div>
+          <script>
+          document.addEventListener("DOMContentLoaded", function(event) {
+          function setOptOutText(element) {
+          _paq.push([function() {
+          element.checked = !this.isUserOptedOut();
+          document.querySelector('label[for=optout] strong').innerText = this.isUserOptedOut()
+          ? 'You are currently opted out. Click here to opt in.'
+          : 'You are currently opted in. Click here to opt out.';
+        }]);
+         }
+
+         var optOut = document.getElementById("optout");
+          optOut.addEventListener("click", function() {
+         if (this.checked) {
+           _paq.push(['forgetUserOptOut']);
+         } else {
+           _paq.push(['optUserOut']);
+          }
+        setOptOutText(optOut);
+       });
+       setOptOutText(optOut);
+      });
+      </script>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; The @ Company 2019-2021. All Rights Reserved.</p>
+
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="DocsPage/vendor/jquery/jquery.min.js"></script>
+<script src="DocsPage/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/new-age.min.js"></script>
+<!-- Smooth scrolling scripts-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="../js/smoothscroll.js"></script>
+<script type="text/javascript" src="../js/carousel.js"></script>
+</body>
+
+</html>

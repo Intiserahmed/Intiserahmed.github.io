@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Competitive Positioning</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']}).then(loadChartData);
+
+        const url = 'https://docs.google.com/spreadsheets/d/1WTryprRV73dmi54-cuivD1nIOq2dxw-rLQ-V_tMwDc4/';
+        const sheet = 'BubbleChartData';
+        const headers = '1';
+
+        function loadChartData() {
+            let queryString = encodeURIComponent('SELECT A, B, C, F, E');
+            let query = new google.visualization.Query(url+
+                'gviz/tq?sheet='+sheet+
+                '&headers='+headers+
+                '&tq='+queryString
+            );
+            query.send(handleQueryResponse);
+        }
+
+        function handleQueryResponse(response) {
+            let chartsDataTable = response.getDataTable();
+            drawSeriesChart(chartsDataTable);
+        }
+
+        function drawSeriesChart(data) {
+            console.log(data);
+
+            var options = {
+                title: 'Trustworthiness & Core Technology vs Capability',
+                hAxis: {title: 'Capability - Support for a range of use cases',maxValue:6},
+                vAxis: {title: 'Trustworthiness - Data protection and personal privacy',maxValue:6},
+                sizeAxis: {minValue: 0,  maxValue: 5, minSize: 10, maxSize: 50},
+                bubble: {textStyle: {fontSize: 11}}
+            };
+
+            var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+<div id="series_chart_div" style="width: 1500px; height: 1000px;"></div>
+</body>
+</html>

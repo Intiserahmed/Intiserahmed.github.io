@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>Competitive Evaluation</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']}).then(loadChartData);
+
+        const url = 'https://docs.google.com/spreadsheets/d/1WTryprRV73dmi54-cuivD1nIOq2dxw-rLQ-V_tMwDc4/';
+        const sheet = 'BarChartData';
+        const headers = '1';
+
+        function loadChartData() {
+            let queryString = encodeURIComponent('SELECT A, B, C, D, E, F, G LIMIT 10');
+            let query = new google.visualization.Query(url+
+                'gviz/tq?sheet='+sheet+
+                '&headers='+headers+
+                '&tq='+queryString
+            );
+            query.send(handleQueryResponse);
+        }
+
+        function handleQueryResponse(response) {
+            let chartsDataTable = response.getDataTable();
+            drawSeriesChart(chartsDataTable);
+        }
+
+        function drawSeriesChart(data) {
+            console.log(data);
+            var options = {
+                chart: {
+                    title: 'Top 10 Competitors',
+                    subtitle: 'Data Security, I/O, Platform, Privacy, Go To Market',
+                },
+                bars: 'vertical' // Required for Material Bar Charts.
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+        }
+    </script>
+</head>
+<body>
+<div id="barchart_material" style="width: 1500px; height: 800px;"></div>
+</body>
+</html>

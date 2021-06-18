@@ -1,0 +1,203 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/templates/heroic-features)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+body {
+  padding-top: 56px;
+  overflow-x: hidden; /* Hide scrollbars */
+}
+
+h4 {
+  font-size: large;
+}
+
+p {
+  font-size: large;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding: 1px;
+}
+
+
+#mainNav {
+  border-color: rgba(34, 34, 34, 0.05);
+  background-color: #F05E3E! important;
+  transition: all .35s;
+  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding-bottom: 50px;
+}
+
+#mainNav .navbar-brand {
+  background-color: #F05E3E;
+  color: #fff;
+  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+#mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+  background-color: #F05E3E;
+  color: #fff;
+}
+
+#mainNav .navbar-toggler {
+  background-color: #F05E3E;
+  font-size: 12px;
+  padding: 8px 10px;
+  color: #fff;
+  border-color: #fff;
+}
+
+#mainNav .navbar-nav > li > a {
+  background-color: #F05E3E;
+  font-size: 11px;
+  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 15px 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#mainNav .navbar-nav > li > a.active {
+  color: #fff !important;
+ background-color: #F05E3E;
+}
+
+#mainNav .navbar-nav > li > a.active:hover {
+ background-color: #F05E3E;
+}
+
+#mainNav .navbar-nav > li > a,
+#mainNav .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: #F05E3E;
+}
+
+#mainNav .navbar-nav > li > a:hover,
+#mainNav .navbar-nav > li > a:focus:hover {
+  color: #fff;
+  background-color: #F05E3E;
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    border-color: transparent;
+   background-color: #F05E3E;
+  }
+  #mainNav .navbar-brand {
+    color: fade(white, 100%);
+    background-color: #F05E3E;
+  }
+  #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+    color: white;
+    background-color: #F05E3E;
+  }
+  #mainNav .navbar-nav > li > a,
+  #mainNav .navbar-nav > li > a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: #F05E3E;
+  }
+  #mainNav .navbar-nav > li > a:hover,
+  #mainNav .navbar-nav > li > a:focus:hover {
+    color: white;
+    background-color: #F05E3E;
+  }
+  #mainNav.navbar-shrink {
+    border-color: rgba(34, 34, 34, 0.1);
+    background-color: white;
+    background-color: #F05E3E;
+  }
+  #mainNav.navbar-shrink .navbar-brand {
+    color: #222222;
+    background-color: #F05E3E;
+  }
+  #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
+    color: #fdcc52;
+    background-color: #F05E3E;
+  }
+  #mainNav.navbar-shrink .navbar-nav > li > a,
+  #mainNav.navbar-shrink .navbar-nav > li > a:focus {
+    color: #222222;
+    background-color: #F05E3E;
+  }
+  #mainNav.navbar-shrink .navbar-nav > li > a:hover,
+  #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
+    color: #fdcc52;
+    background-color: #F05E3E;
+  }
+}
+
+#GetStartedBtn {
+  color: #F05E3E;
+  border:3px; 
+  border-radius: 3px;
+  border-style: solid; 
+  border-color: #FFFFFF;
+  background-color: white;
+  width: fit-content;
+  padding: 10px;
+}
+
+#JumbotronWords {
+  background-color: white;
+  color: #F05E3E;
+  padding: 100px;
+  padding-bottom: 25px;
+  border-radius: .2rem;
+ }

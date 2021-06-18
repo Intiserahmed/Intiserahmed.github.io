@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>@platform - Get Started</title>
+  <meta name="description"
+        content="Get stared building permission-based apps on the @platform">
+
+  <!-- Bootstrap core CSS -->
+  <link href="UpdatedLandingPage/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="UpdatedLandingPage/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="UpdatedLandingPage/vendor/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="https://use.typekit.net/fch8oap.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="stylesheets/new-age.css" rel="stylesheet">
+
+  <!-- Tab Icon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/@logo.jpg" />
+
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    _paq.push(['requireCookieConsent']);
+    (function() {
+      var u="https://atsign.matomo.cloud/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '2']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/atsign.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+
+  <script type="text/javascript">
+    $(window).on('load',function(){
+      $('#permission').modal('show');
+    });
+  </script>
+
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top p-0" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="index.html"><img
+            src="assets/img/@dev.png"
+            alt="The @ Company" id="logo" class="top-logo"></a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars ml-1"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="gettingstarted.html">Get Started</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="docs.html">Docs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="samples.html">Sample Apps</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="guides.html">Tech Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link js-scroll-trigger" href="community.html">Community</a>
+          <div class="dropdown-content">
+            <a href="advisors.html">Our Advisors</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link js-scroll-trigger" href="devprogram.html">@dev program</a>
+          <div class="dropdown-content">
+            <a href="commissions.html">Commissions</a>
+            <a href="certification.html">Certification</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div style="text-align: end;padding-right: 3%;">
+    <a href="https://twitter.com/atsigncompany"><img src="assets/img/twitter.png" alt="The @ Company Twitter" id="Twitterlogo" width="20px" style="padding:2px;"></a>
+    <a href="https://github.com/atsign-foundation"><img src="assets/img/Github.png" alt="The @ Company Github" id="GHlogo" width="22px" style="padding:2px;"></a>
+    <a href="https://blog.atsign.dev"><img src="assets/img/hashnode-icon-black.png" alt="The @ Company Hashnode" id="HNlogo" width="22px"style="padding:1px;"></a>
+    <a href="https://atsigncompany.medium.com/"><img src="assets/img/medium.png" alt="The @ Company Medium" id="Mediumlogo" width="35px"></a>
+    <a href="https://www.youtube.com/channel/UCzjSJbPmIEDXFbHb2RIj9Gg"><img src="assets/img/YT Icon.png" alt="The @ Company YouTube" id="YTlogo" width="27px"></a>
+  </div>
+</nav>
+<header class="masthead">
+  <div class="col-lg-12 p-0 my-auto">
+    <div class="header-content mx-auto">
+      <div class="container">
+        <div id="MastheadContent">
+          <h3>Getting started with the <span style="color: #ff6600;">@</span>platform</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="orange-bar">
+</div>
+<div class="discord-button"><a href="https://discord.com/invite/55sHTQFxfz" target="_blank">
+  <img style="width:52px" src="assets/img/Discord-Logo-White.png" alt="discord channel"></a></div>
+<section class="text-general">
+  <div class="text-general-content">
+    <div class="container">
+      <div class="orange-box">Note: We're still working to make this page better! Please give us feedback
+        <a href="mailto:developers@atsign.com">here</a>.</div>
+      <h1>Documentation</h1>
+      <p>As the heart of the @platform, we developed the @protocol in Dart, a powerful language that can be used to develop mobile apps
+        with Flutter, Google’s increasingly popular UI software framework. If you are new to Flutter or
+        Dart, no problem! Many of our first developers knew nothing about these languages coming in. For
+        guidance on Flutter installation and development, please visit <a href="https://flutter.dev" target="_blank">
+          flutter.dev</a>. Regardless of your coding knowledge, we recommend that you begin with “Getting Started.”
+      </p>
+      <h1>Getting Started</h1>
+      <p>We’re excited to help you get your very own @platform environment up and running!
+        As a prerequisite, you will need Flutter/Dart installed on your machine. If you haven’t
+        already, please follow the “Getting started” steps on <a href="https://flutter.dev">flutter.dev</a>
+        before you proceed.</p>
+      <p><strong>Important note:</strong> Flutter works best with Android Studio, but you can also
+        use Intellij or Visual Studio Code as your IDE.  </p>
+      <h4>Step 1: Welcome to the @protocol</h4>
+      <p>Our Co-Founder and CTO, Colin Constable, has a message for you!</p>
+      <div class="container video-container">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/472448831?title=0&byline=0&portrait=0"
+                  class="video-frame"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <p><a href="https://vimeo.com/472448831">Welcome to the @protocol</a></p>
+      </div>
+      <h4>Step 2: Set up your virtual environment</h4>
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="linux-tab" data-toggle="tab" href="#linux" role="tab" aria-controls="linux" aria-selected="true">
+            Linux
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="windows-tab" data-toggle="tab" href="#windows" role="tab" aria-controls="windows" aria-selected="false">
+            Windows
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="macos-tab" data-toggle="tab" href="#macos" role="tab" aria-controls="macos" aria-selected="false">
+            MacOS
+          </a>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="linux" role="tabpanel" aria-labelledby="linux-tab">
+          <br>
+          <h3>Install Docker & docker-compose</h3>
+          <a href="https://docs.docker.com/engine/">Docker Engine overview | Docker Documentation</a>
+          <br>
+          <br>
+          <h3>Configure Network Adapter</h3>
+          <p>
+            <h6> Note: Please ensure that you have Docker up and running before you proceed. </h6> <br><br>
+            Open the Terminal window and enter this command. This permanently puts the Virtual IP address in place.
+            You only need to run this once!
+          </p>
+          <pre>
+            <code>
+              curl -L atsign.dev/curl/rc.local -o setvip.sh
+              sudo ip addr add 10.64.64.64/32 dev lo
+              sudo nano /etc/rc.local
+              <!--sudo curl -L atsign.dev/curl/atloop.plist -o /Library/LaunchDaemons/atloop.plist && \ -->
+            </code>
+          </pre>
+          <p>
+            If the file “/etc/rc.local” is empty, then add the contents of the file “setvip.sh” to /etc/rc.local”. If
+            rc.local already has content, then add the line “ip addr add 10.64.64.64/32 dev lo” above any lines that
+            say “exit 0”. This will ensure that the virtual IP is in place even after a reboot. Ensure the permissions
+            are correct with the following command.
+            <!--Once you enter the above command, an arrow “>” should show up to enter the next line: -->
+          </p>
+          <pre>
+            <code>
+              sudo chmod 744 /etc/rc.local
+              <!--sudo launchctl load /Library/LaunchDaemons/atloop.plist-->
+            </code>
+           <!-- <p>The command line may ask you to enter your password. Go ahead and fill it in if this happens.</p>-->
+          </pre>
+          <h3>Start up the Virtual Environment</h3>
+          <p>Make a new directory called “ve” and run the curl command inside of it: </p>
+          <pre>
+            <code>
+              cd ~ 
+              mkdir ve
+              cd ve
+              curl -L atsign.dev/curl/virtualenv-compose-vip.yaml -o docker-compose.yaml
+            </code>
+          </pre>
+          <p>Now you are ready to spin up the docker containers:</p>
+          <pre>
+            <code>
+              docker-compose up -d
+            </code>
+          </pre>
+          <p>
+            Okay, you're up. Now you can check the <a href="http://localhost:9001/">http://localhost:9001/</a>.
+          </p>
+          <h3>
+            And if you want to upgrade the images, simply:
+          </h3>
+          <pre>
+            <code>
+              docker-compose down
+              docker-compose pull
+              docker-compose up -d
+            </code>
+          </pre>
+        </div>
+        <div class="tab-pane" id="windows" role="tabpanel" aria-labelledby="windows-tab">
+          <br>
+          <h3>Update Windows 10</h3>
+          <p>Use Windows Update to make sure you are on the latest version of Windows 10.</p>
+          <p>Ensure you BIOS is enabled for virtualization, Google to see how to do this for your PC hardware</p>
+          <h3>Install Docker Desktop</h3>
+          <a href="https://www.docker.com/products/docker-desktop">Docker Desktop for Mac and Windows | Docker</a>
+          <br>
+          <br>
+          <h3>Loopback adapter</h3>
+          <br>
+          <h6> Note: Please ensure that you have Docker up and running before you proceed. </h6> <br><br>
+          <p>Install the Microsoft loopback adapter and configure it. The video showing how to do that is here:</p>
+          <div class="container video-container">
+            <div style="padding:56.25% 0 0 0;position:relative;">
+              <iframe src="https://player.vimeo.com/video/506374699?title=0&byline=0&portrait=0"
+                      class="video-frame"
+                      style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                      frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+            <p><a>Loopback driver install Windows 10</a></p>
+          </div>
+          <!--<a href="https://drive.google.com/file/d/1BC0OopE1mWdQls_eXNEF9ZWvVX8EWa4d/view">Loopback driver install Windows 10</a>-->
+          <h3>Start up the at_virtual_enviroment</h3>
+          Run <cmd>cmd</cmd> and enter the following commands. You can run cmd by using the <kbd>windows</kbd> key and
+          the <kbd>r</kbd> key then typing <cmd>cmd</cmd>.
+          <pre>
+            <code>
+            mkdir ve
+            cd ve
+            curl -L atsign.dev/curl/virtualenv-compose-vip.yaml -o docker-compose.yaml
+            </code>
+          </pre>
+          <p>Now you are ready to spin up the docker containers:</p>
+          <pre>
+            <code>
+              docker-compose up -d
+            </code>
+          </pre>
+          <p>
+            Okay, you're up. Now you can check the <a href="http://localhost:9001/">http://localhost:9001/</a>.
+          </p>
+          <h3>
+            And if you want to upgrade the images, simply:
+          </h3>
+          <pre>
+            <code>
+          docker-compose down
+          docker-compose pull
+          docker-compose up -d
+            </code>
+          </pre>
+        </div>
+        <div class="tab-pane" id="macos" role="tabpanel" aria-labelledby="macos-tab">
+          <br>
+          <h3>Install Docker Desktop</h3>
+          <a href="https://www.docker.com/products/docker-desktop">Docker Desktop for Mac and Windows | Docker</a>
+          <br>
+          <br>
+          <h3>Configure Network Adapter</h3>
+          <p>
+            <h6> Note: Please ensure that you have Docker up and running before you proceed. </h6> <br><br>
+            Open the Terminal window and enter this command. This permanently puts the Virtual IP address in place.
+            You only need to run this once!
+          </p>
+          <pre>
+            <code>
+              sudo curl -L atsign.dev/curl/atloop.plist -o /Library/LaunchDaemons/atloop.plist && \
+              
+            </code>
+          </pre>
+            <p>Once you enter the above command, an arrow “>” should show up to enter the next line:</p>
+            <pre>
+            <code>
+              sudo launchctl load /Library/LaunchDaemons/atloop.plist
+            </code>
+          </pre>
+          <p>The command line may ask you to enter your password. Go ahead and fill it in if this happens.</p>
+          <h3>Start up the Virtual Environment</h3>
+          <p>Make a new directory called “ve” and run the curl command inside of it:</p>
+          <pre>
+            <code>
+            mkdir ve
+            cd ve
+            curl -L atsign.dev/curl/virtualenv-compose-vip.yaml -o docker-compose.yaml
+            </code>
+          </pre>
+          <p>Now you are ready to spin up the docker containers:</p>
+          <pre>
+            <code>
+              docker-compose up -d
+            </code>
+          </pre>
+          <p>
+            Okay, you're up. Now you can check the <a href="http://localhost:9001/">http://localhost:9001/</a>.
+          </p>
+          <h3>
+            And if you want to upgrade the images, simply:
+          </h3>
+          <pre>
+            <code>
+          docker-compose down
+          docker-compose pull
+          docker-compose up -d
+            </code>
+          </pre>
+        </div>
+      </div>
+      <h4>Step 3: Start programming!</h4>
+      <p>Congratulations! You’ve set up your virtual environment and can now experiment with the hello_world app. Now you can
+        start building your very
+        own privacy-conscious apps.</p>      
+      <p>When writing code, the only change needed to run in the virtual environment is changing the ROOT_DOMAIN to
+        point to <code>vip.ve.atsign.zone</code>. The production value is <code>root.atsign.org</code>.
+      </p>
+      
+      <h1>Have a play with the Hello World sample application</h1>
+      <h2>Clone the at_hello_world repository</h2>
+      <p>To get a feel for what an @platform app looks and runs like, clone the
+        <a href="https://github.com/atsign-foundation/at_demos/tree/trunk/at_hello_world">at_hello_world
+          repository</a> to your machine. This repo, which contains both a complete and
+        incomplete version of the at_hello_world app, includes some of the most common
+        @protocol verbs and methods such as get, getKeys, and put. Learning these verbs
+        will solidify your understanding of how to begin developing your own application. For instructions on how to run the Hello_World application, please watch the video below:</p>
+      <div class="container video-container">
+        <div style="padding:56.25% 0 0 0;position:relative;"> 
+         <iframe src="https://player.vimeo.com/video/511415115?title=0&byline=0&portrait=0"
+                  class="video-frame"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <p><a href="https://vimeo.com/511415115">Running the at_hello_world application</a></p>
+      </div>
+       <!-- If you would like to view a demonstration of the at_hello_world application, check out the video below. (Note that the location of the at_hello_world application used in the video is different than the one linked above.)
+
+      <div class="container video-container">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/500254019?title=0&byline=0&portrait=0"
+                  class="video-frame"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <p><a href="https://vimeo.com/500254019">Implement the at_hello_world application</a></p>
+      </div> -->
+          
+      <p>We’d love to support you as you embark on your app development journey. To connect with
+        other likeminded developers, feel free to join our <a href="https://discord.gg/55sHTQFxfz">Discord</a>
+        as well as our
+        <a href="https://groups.google.com/a/atsign.com/g/dev" target="_blank">@developers Google
+          group</a>. We’ve also compiled various <a href="docs.html">documentation</a>,
+        <a href="guides.html">guides</a>, and <a href="samples.html">samples</a> that you might find helpful. </p>
+      <p>In the near future you’ll also be able to sign up for our <a href="devprogram.html">@dev program</a>,
+        which offers certification and commissions for your app. <a href="devprogram.html">Learn more about our @dev
+          program.</a>
+      </p>
+      <!--<p>That’s it! We can’t wait to see what kinds of apps you create. By developing on the
+        @protocol, you’re giving control back to the people and building a better Internet.</p>-->
+
+        <h1>Making your own @platform application</h1>
+        <ul>
+          If you are ready to begin building your own @platform based applications in the virtual environment, 
+            simply copy the server_demo_service.dart file as well as the at_conf.dart file from the at_hello_world application. 
+            These files provide the necessary helper methods and variables to use the @protocol easily and connect to the local 
+            DNS server that the virtual environment provides. In the at_conf.dart file, ensure that the “root” variable is set 
+            to vip.ve.atsign.zone and the “namespace” is assigned to a String of your choice. If you want, you can watch the video below to follow along.
+    <div class="container video-container">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/511438756?title=0&byline=0&portrait=0"
+                  class="video-frame"
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <p><a href="https://vimeo.com/511438756">Creating your own @platform project</a>
+      </div>
+          
+        </ul>
+        
+
+
+        <h1>Using the VE (same for all systems)</h1>
+      <p>You can now use a browser to see the state of the system.</p>
+      <p>This URL will open a dashboard of all the services running on your local virtual environment:</p>
+      <a href="http://localhost:9001">http://localhost:9001</a>
+      <p>Should look like this:</p>
+      <img class="img-fluid" alt="Responsive image" src="./assets/img/ve9001.jpg">
+      <p>
+        <br>
+        This shows the full @platform stack running in a single container. You can also look at the log files of each
+        container and restart anything if you want to. The redisload runs after 10 seconds or so and populates the
+        redis database so you don’t have to.
+      </p>
+      <p>As you might have seen in the video, we’ve made it easy to identify @platform-related bugs by providing
+        an interface to check on the status of your servers.</p>
+      <p>For details on your testable @signs, check out: <a href="http://localhost:9001/">http://localhost:9001/</a></p>
+      <p>
+        If anything breaks, you can always hit the Restart all button in the web page or just kill and restart the
+        Docker containers with docker-compose down.
+      </p>
+      <h1>
+        Advanced options
+      </h1>
+      <p>
+        If you are unsure about the instructions below, then you might want to stick with the emulated devices on
+        your machine, as these settings can be tricky.
+      </p>
+      <p>
+        If you would like to test apps on physical devices and point them to your VE, it is possible to do that with a
+        couple of configuration changes. The VE also includes a DNS masquerading server which can serve DNS and point
+        the DNS address vip.ve.atsign.zone to the hosting PC/MAC/Linux machine. First you need to enable the DNS Masq
+        service in the docker-compose.yaml by uncommenting the needed lines and re running docker-compose up.
+        Then, you need to find the IP address of your machine. This can be achieved with ifconfig/ipconfig or the ip command on linux. Once you know the IP
+        address of your machine, you can configure the DNS masq with that IP address as shown below.
+      </p>
+      <img class="img-fluid" alt="Responsive image" src="./assets/img/ve5380.jpg">
+      <p>
+        <br>
+      <p>For details on your local DNS Masq server, check out: <a href="http://localhost:5380/">http://localhost:5380/</a></p>
+
+        Once you have that configured, hit the save button and you can configure your mobile device to “point” to the
+        DNS server running on your host. On Android that is configured in the WiFi settings and on IOS in settings
+        under “configure DNS”.
+
+      </p>
+      <!--      <div class="container video-container">-->
+      <!--        <div style="padding:56.25% 0 0 0;position:relative;">-->
+      <!--          <iframe src="https://player.vimeo.com/video/494202020?title=0&byline=0&portrait=0"-->
+      <!--                  class="video-frame"-->
+      <!--                  style="position:absolute;top:0;left:0;width:100%;height:100%;"-->
+      <!--                  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>-->
+      <!--        <script src="https://player.vimeo.com/api/player.js"></script>-->
+      <!--        <p><a href="https://vimeo.com/494202020">Setting up your virtual environment</a></p>-->
+      <!--      </div>-->
+
+      <!--      <div class="container video-container">-->
+      <!--        <div style="padding:56.25% 0 0 0;position:relative;">-->
+      <!--          <iframe src="https://player.vimeo.com/video/494195755?title=0&byline=0&portrait=0"-->
+      <!--                  class="video-frame"-->
+      <!--                  style="position:absolute;top:0;left:0;width:100%;height:100%;"-->
+      <!--                  frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>-->
+      <!--        <script src="https://player.vimeo.com/api/player.js"></script>-->
+      <!--        <p><a href="https://vimeo.com/494195755">Setting up your virtual environment</a></p>-->
+      <!--      </div>-->
+      <h1>
+        Test Data
+      </h1>
+      <p style="font-weight:bold">List of Testable @signs:</p>
+      <ul>
+        <li>@alice🛠</li>
+        <li>@ashish🛠</li>
+        <li>@barbara🛠</li>
+        <li>@bob🛠</li>
+        <li>@colin🛠</li>
+        <li>@egbiometric🛠</li>
+        <li>@egcovidlab🛠</li>
+        <li>@egcreditbureau🛠</li>
+        <li>@eggovagency🛠</li>
+        <li>@emoji🦄🛠</li>
+        <li>@eve🛠</li>
+        <li>@jagan🛠</li>
+        <li>@kevin🛠</li>
+        <li>@murali🛠</li>
+        <li>@naresh🛠</li>
+        <li>@purnima🛠</li>
+        <li>@sameeraja🛠</li>
+        <li>@sitaram🛠</li>
+      </ul>
+      <h1>Additional Notes:</h1>
+      <ul>
+        <!--<li>You can only use the app with 1 @sign at a time, so don't sign in with multiple @signs. If you want to test
+          with another @sign, you will have to uninstall the app from the emulator before you can do so..</li>-->
+        The <a href="https://github.com/atsign-foundation/at_demos/tree/master/at_hello_world">at_hello_world </a>app will only work within the virtual environment! That means that you can’t use any @sign
+          beyond the ones we’ve provided. You might be wondering, “What if I want to use my own @sign to authenticate?”
+          Check out the <a href="https://pub.dev/packages/atsign_authentication_helper">atsign_authentication_helper</a> directory in the at_widget repository (currently on the dev_env
+          branch) to learn more! As an easter egg, there is a version of the hello_world app that uses the QR code reader 
+          in the qr_code branch of the <a href="https://github.com/atsign-foundation/at_demos">at_demos</a> repository. 
+        
+      </ul>
+      <hr> </hr>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <ul class="list-inline list-social">
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="gettingstarted.html">Get Started</a>
+      </li>
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="docs.html">Docs</a>
+      </li>
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="guides.html">Tech Blog</a>
+      </li>
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="samples.html">Sample Apps</a>
+      </li>
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="community.html">Community</a>
+      </li>
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="devprogram.html">@dev program</a>
+      </li>
+      <li class="list-inline-item">
+        <a class="nav-link js-scroll-trigger" href="http://atsign.com">The @ Company</a>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-outline" data-toggle="modal" data-target="#permission">
+    We do not use tracking cookies
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="permission" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sorry, no cookies for you</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="text-align:left;">
+          <div id="optout-form" class="api-docs">
+            <p>Just a heads up! We do not use any cookies to track or sell any of your personally
+              identifying information on our site. We do use Matomo to analyze how people are using
+              our site. Understanding what people love and hate about our site helps us build a
+              better website.</p>
+            <p>Does this sound okay? If not, just click below to opt out of any tracking.</p>
+
+            <p>
+              <input type="checkbox" id="optout" />
+              <label for="optout"><strong></strong></label>
+            </p>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+              function setOptOutText(element) {
+                _paq.push([function() {
+                  element.checked = !this.isUserOptedOut();
+                  document.querySelector('label[for=optout] strong').innerText = this.isUserOptedOut()
+                          ? 'You are currently opted out. Click here to opt in.'
+                          : 'You are currently opted in. Click here to opt out.';
+                }]);
+              }
+
+              var optOut = document.getElementById("optout");
+              optOut.addEventListener("click", function() {
+                if (this.checked) {
+                  _paq.push(['forgetUserOptOut']);
+                } else {
+                  _paq.push(['optUserOut']);
+                }
+                setOptOutText(optOut);
+              });
+              setOptOutText(optOut);
+            });
+          </script>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <div class="container">
+    <p>&copy; The @ Company 2019-2021. All Rights Reserved.</p>
+
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="DocsPage/vendor/jquery/jquery.min.js"></script>
+<script src="DocsPage/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/new-age.min.js"></script>
+<!-- Smooth scrolling scripts-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="../js/smoothscroll.js"></script>
+</body>
+
+</html>
